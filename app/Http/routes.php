@@ -13,8 +13,7 @@
 
 Route::group(['middleware' => ['web']], function () {
 
-    Route::get('/', function () {
-        return view('welcome');
-    });
+    Route::get('/', 'BooksController@index');
+    Route::get('/{book}', 'BooksController@show');
 
 });
